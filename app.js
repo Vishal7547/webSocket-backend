@@ -16,13 +16,7 @@ const io = new Server(server, {
     credentials: true,
   },
 });
-app.use(
-  cors({
-    origin: "https://web-socket-frontend.vercel.app/",
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
